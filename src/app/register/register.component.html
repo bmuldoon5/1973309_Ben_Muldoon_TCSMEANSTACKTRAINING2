@@ -1,0 +1,25 @@
+<div>
+
+<!--<app-register></app-register>-->
+
+<h1>Registration Form</h1>
+    
+<form #registerRef= "ngForm" (ngSubmit)="registerUser(registerRef.value)">
+    <label for="fname">First name:</label><br>
+    <input type= "text" name="fname" ngModel><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" name="lname" ngModel><br><br>
+    <label for="username">Username:</label><br>
+    <input type="text" name="username" ngModel ><br><br>
+    <label for="password">Password:</label><br>
+    <input type="text" name="password" ngModel><br><br>
+    <input type ="submit" value="Register" (click)="register()">
+</form> 
+
+
+
+
+<input type="button" value="register" (click)="register()">
+
+
+</div>
