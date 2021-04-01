@@ -1,0 +1,158 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>
+
+<h1>Online Test Application:</h1>
+<br />
+
+Your Score: {{score}}/3
+
+<br /> <br />
+
+
+<div class="container">
+  <!-- Content here -->
+
+  <form #myForm="ngForm" (submit)="submitForm(myForm)" novalidate>
+
+    <!--Question 1-->
+    <p>1. Question Description</p><br />
+    <p>A: </p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" [(ngModel)]="q1" name="q1" value="q1-a" id="q1-a" ngModel required>
+      <label class="form-check-label" for="Q1-1">
+        Option A
+      </label>
+      <div *ngIf="isSubmitted"><span> *Correct Answer</span></div>
+    </div>
+    <br />
+    <p>B: </p>
+    <div class="form-check">
+      <input class="form-check-input" [(ngModel)]="q1" type="radio" name="q1" value="q1-b" id="q1-2" ngModel required>
+      <label class="form-check-label" for="Q1-2">
+        Option B
+      </label>
+      <div *ngIf="isSubmitted"> <span> </span></div>
+      <span> </span>
+    </div>
+    <br />
+    <p>C: </p>
+    <div class="form-check">
+      <input class="form-check-input" [(ngModel)]="q1" type="radio" name="q1" value="q1-c" id="q1-3" ngModel required>
+      <label class="form-check-label" for="Q1-3">
+        Option Description
+      </label>
+      <div *ngIf="isSubmitted"><span></span></div>
+    </div>
+    <br />
+    <p>D: </p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" [(ngModel)]="q1" name="q1" value="q1-d" id="q1-4">
+      <label class="form-check-label" for="Q1-4">
+        Option Description
+      </label>
+      <div *ngIf="isSubmitted"><span> </span></div>
+    </div>
+    <!--sending msessage about right answer-->
+    <div *ngIf="isSubmitted"><span>{{review1}}</span></div>
+    <br /> <br /> <br />
+
+
+    <!--Question 2-->
+    <p>2. Question Description</p><br />
+    <p>A: </p>
+    <div class="form-check">
+      <input class="form-check-input" [(ngModel)]="q2" type="radio" name="q2" value="q2-a" id="q2-1" ngModel required>
+      <label class="form-check-label" for="Q2-1">
+        Option A
+      </label>
+      <div *ngIf="isSubmitted"><span> </span></div>
+    </div>
+    <br />
+    <p>B:</p>
+    <div class="form-check">
+      <input class="form-check-input" [(ngModel)]="q2" type="radio" name="q2" value="q2-b" id="q2-2" ngModel required>
+      <label class="form-check-label" for="Q2-2">
+        Option B
+      </label>
+      <div *ngIf="isSubmitted"><span>*Correct Answer </span></div>
+    </div>
+    <br />
+    <p>C:</p>
+    <div class="form-check">
+      <input class="form-check-input" [(ngModel)]="q2" type="radio" name="q2" value="q2-c" id="q2-3" ngModel required>
+      <label class="form-check-label" for="Q2-3">
+        Option C
+      </label>
+      <div *ngIf="isSubmitted"><span> </span></div>
+    </div>
+    <br />
+    <p>D:</p>
+    <input type="radio" [(ngModel)]="q2" name="q2" value="q2-d" id="q2-4" ngModel required>
+    <div *ngIf="isSubmitted"><span> </span></div>
+    <br />
+    <!--sending msessage about right answer-->
+    <div *ngIf="isSubmitted"><span>{{review2}}</span></div>
+    <br /> <br /> <br />
+
+
+
+    <!--Question 3-->
+    <p>3. Question Description</p><br />
+    <p>A: </p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="q3-a" [(ngModel)]="q3" id="q3-1" ngModel required>
+      <label class="form-check-label" for="Q3-1">
+        Option A
+      </label>
+      <div *ngIf="isSubmitted"><span> </span></div>
+    </div>
+    <br />
+    <p>B:</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="q3-b" [(ngModel)]="q3" id="q3-2" ngModel required>
+      <label class="form-check-label" for="Q3-2">
+        Option B
+      </label>
+      <div *ngIf="isSubmitted"><span> </span></div>
+    </div>
+    <br />
+    <p>C:</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" [(ngModel)]="q3" value="q3-c" id="q3-3" ngModel required>
+      <label class="form-check-label" for="Q3-3">
+        Option C
+      </label>
+      <div *ngIf="isSubmitted"><span> *Correct Answer</span></div>
+    </div>
+    <br />
+    <p>D:</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="q3-d" [(ngModel)]="q3" id="q3-4" ngModel required>
+      <label class="form-check-label" for="Q3-4">
+        Option D
+      </label>
+      <div *ngIf="isSubmitted"><span> </span></div>
+    </div>
+
+    <br />
+    <div *ngIf="isSubmitted"><span>{{review3}}</span></div>
+    <br /> <br /> <br />
+
+
+
+    <button type="submit"> Submit </button>
+
+  </form>
+
+
+</div>

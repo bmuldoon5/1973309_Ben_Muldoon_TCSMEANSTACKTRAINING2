@@ -1,0 +1,16 @@
+
+
+Honestly should have used a for loop, wouldve made life easier
+
+used ngModel to read the values in the radio button
+-used this to get score and give 
+
+used ngform
+
+showed correct answer no matter what after submit
+-give message saying answer correct or telling them that their question is wrong, correct answer always showed
+
+
+used *ngIf for when the button is submitted to give correct answer and review in string form\
+
+put all questions in a container
